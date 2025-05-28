@@ -1,0 +1,46 @@
+.card {
+    &.card-theme {
+        border: 0;
+        border-radius: 0;
+    }
+
+    &.card-theme1 {
+        border: 1px solid $stock_light;
+        background-color: $white_color;
+        overflow: hidden;
+        border-radius: 8px;
+        min-height: 141px;
+
+        .card-body {
+            padding: 20px;
+
+            .card-grid-title {
+                h6 {
+                    margin-bottom: 0px;
+                    font-weight: 600;
+                    font-size: 32px;
+                    color: $text_black_color;
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: $text_color;
+                }
+            }
+        }
+    }
+
+
+
+
+    .card-row {
+        margin-left: -10px;
+        margin-left: -10px;
+
+        .card-col {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}

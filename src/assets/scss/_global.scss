@@ -1,0 +1,488 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: $text_color;
+}
+
+// Common CSS
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600
+}
+
+hr {
+    border-color: $stock_dark;
+    margin: 10px 0px;
+}
+
+
+h1 {
+    font-size: 48px;
+    line-height: 62.4px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 46px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 31px;
+}
+
+h5 {
+    font-size: 21px;
+    line-height: 27px;
+}
+
+h6 {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+p {
+    &:nth-last-child(1) {
+        margin-bottom: 0px;
+    }
+}
+
+b {
+    font-weight: 600;
+}
+
+a,
+a:hover {
+    text-decoration: none
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%
+}
+
+.error-msg {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: $danger_color;
+    font-weight: 500;
+}
+
+.success-msg {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: $success_color;
+    font-weight: 500;
+}
+
+.file-name {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: $primary_color;
+    font-weight: 500;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.note-msg {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: $text_color;
+    font-weight: 500;
+}
+
+
+.text-link {
+    color: $primary_color;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+
+    &:hover {
+        text-decoration: underline;
+        color: $primary_hover_color;
+    }
+
+    &.text-link-sm {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15.6px;
+
+        i {
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+    }
+}
+
+.drag-icon {
+    cursor: move;
+
+    img {
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    i {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+
+.inner-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18.2px;
+    text-align: left;
+    color: $text_black_color;
+}
+
+.inner-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .inner-title-right {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+    }
+
+    .inner-title-left {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+    }
+
+
+    .inner-title-text {
+        h6 {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18.2px;
+            text-align: left;
+            margin-bottom: 0px;
+            color: $text_black_color;
+
+        }
+    }
+
+    .inner-title-text-small {
+        h6 {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 15px;
+            text-align: left;
+            margin-bottom: 0px;
+            color: $text_black_color;
+
+        }
+    }
+}
+
+
+// Font Size
+.fs-10 {
+    font-size: 10px !important
+}
+
+.fs-11 {
+    font-size: 11px !important
+}
+
+.fs-12 {
+    font-size: 12px !important
+}
+
+.fs-13 {
+    font-size: 13px !important
+}
+
+.fs-14 {
+    font-size: 14px !important
+}
+
+.fs-15 {
+    font-size: 15px !important
+}
+
+.fs-16 {
+    font-size: 16px !important
+}
+
+.fs-17 {
+    font-size: 17px !important
+}
+
+.fs-18 {
+    font-size: 18px !important
+}
+
+.fs-19 {
+    font-size: 19px !important
+}
+
+.fs-20 {
+    font-size: 20px !important
+}
+
+.fs-21 {
+    font-size: 21px !important
+}
+
+.fs-22 {
+    font-size: 22px !important
+}
+
+.fs-23 {
+    font-size: 23px !important
+}
+
+.fs-24 {
+    font-size: 24px !important
+}
+
+.fs-26 {
+    font-size: 26px !important
+}
+
+.fs-28 {
+    font-size: 28px !important
+}
+
+.fs-30 {
+    font-size: 30px !important
+}
+
+.fs-36 {
+    font-size: 36px !important
+}
+
+.fs-42 {
+    font-size: 42px !important
+}
+
+.fs-48 {
+    font-size: 48px !important
+}
+
+// Font Weight
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
+}
+
+// Icon Size
+.icon-xs {
+    height: 16px;
+    width: 16px
+}
+
+.icon-sm {
+    height: 18px;
+    width: 18px
+}
+
+.icon-md {
+    height: 22px;
+    width: 22px
+}
+
+.icon-lg {
+    height: 24px;
+    width: 24px
+}
+
+.icon-xl {
+    height: 28px;
+    width: 28px
+}
+
+.icon-xxl {
+    height: 32px;
+    width: 32px
+}
+
+
+// scrollbar
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #21263C #DEE5EA;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: #DEE5EA
+}
+
+::-webkit-scrollbar-track {
+    background: #DEE5EA
+}
+
+::-webkit-scrollbar-thumb {
+    background: #21263C;
+    border-radius: 5px
+}
+
+// File Information
+.file-information {
+    padding: 4px 10px;
+    border-radius: 40px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+    width: fit-content;
+    block-size: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: #EAECEF;
+    color: $text_color;
+    margin-top: 5px;
+
+    i {
+        margin-right: 4px;
+        -webkit-text-stroke: 0.4px;
+    }
+}
+
+// paginationbox
+// .paginationbox {
+
+//     &.pagination-fixed {
+//         position: fixed;
+//         bottom: 0;
+//         left: 200px;
+//         right: 0;
+//     }
+
+//     .pagination-container {
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         justify-content: space-between;
+//         gap: 8px;
+
+//         .pagination-left {
+//             display: flex;
+//             align-items: center;
+//             gap: 19px;
+//         }
+
+//         .pagination-item {
+//             display: flex;
+//             flex-direction: row;
+//             align-items: center;
+//             gap: 8px;
+
+//             p {
+//                 font-size: 12px;
+//                 font-weight: 500;
+//                 line-height: 14.4px;
+//                 color: $text_color;
+//                 text-transform: capitalize;
+//                 margin: 0;
+//             }
+
+//             .ng-select-container {
+//                 min-height: 30px;
+//                 min-width: 55px;
+//                 color: $text_color;
+//             }
+//         }
+
+
+
+
+//     }
+// }
+
+/* -------------------------------------------------------------------------- */
+/*                                  Width CSS                                 */
+/* -------------------------------------------------------------------------- */
+.w150 {
+    width: 150px;
+}
+
+.w180 {
+    width: 180px;
+}
+
+.image-view-container {
+    width: 100%;
+}
+
+
+
+/* ----------------------------- .profile-upload ---------------------------- */
+.profile-upload {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+
+    .profile-image {
+        width: 73px;
+        height: 73px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .profile-text {
+        h6 {
+            font-size: 21px;
+            font-weight: 600;
+            line-height: 27.3px;
+            text-align: left;
+            color: $text_black_color;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* ----------------------------- .profile-upload ---------------------------- */

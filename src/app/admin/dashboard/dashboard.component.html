@@ -1,0 +1,245 @@
+<div class="page-content">
+
+  <div class="content-area">
+
+    <div class="back-wrapper">
+      <div class="back-button">
+        <button class="btn btn-sm btn-transparent btn-icon-text">
+          <i class="th th-outline-arrow-left-2"></i> Back
+        </button>
+      </div>
+      <div class="back-wrapper-inner">
+        <div class="back-wrapper-left">
+          <div class="page-title-wrapper">
+            <h4>Graduation Track</h4>
+          </div>
+        </div>
+        <div class="back-wrapper-right">
+          <div class="dropdown">
+            <button id="dropdown-Action" type="button" class="btn btn-icon btn-outline-white " data-bs-toggle="dropdown"
+              aria-expanded="false" collapseable Table in Noraml Div data-bs-auto-close="outside"
+              data-bs-popper-config='{"strategy":"fixed"}'>
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <div aria-labelledby="dropdown-Action">
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+    <div class="chat-wrapper">
+      <div class="row">
+        <div class="col-6">
+          <div class="card-chat">
+            <div class="chat-title">
+              <h6>Track Completion</h6>
+            </div>
+            <div class="chart-inner">
+              <div style="width:350px">
+                <canvas baseChart [labels]="doughnutChartData.labels" [datasets]="doughnutChartData.datasets"
+                  [options]="doughnutChartOptions" [legend]="true" [type]="'doughnut'">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row row-gap-4">
+            <div class="col-md-6">
+              <div class="card card-grid card-theme1">
+                <div class="card-body">
+                  <div class="card-grid-details">
+                    <div class="card-grid-title">
+                      <h6>50</h6>
+                      <p>Total Students Enrolled</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card card-grid card-theme1">
+                <div class="card-body">
+                  <div class="card-grid-details">
+                    <div class="card-grid-title">
+                      <h6>5</h6>
+                      <p>Badges </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card card-grid card-theme1">
+                <div class="card-body">
+                  <div class="card-grid-details">
+                    <div class="card-grid-title">
+                      <h6>68%</h6>
+                      <p>Completion Rate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card card-grid card-theme1">
+                <div class="card-body">
+                  <div class="card-grid-details">
+                    <div class="card-grid-title">
+                      <h6>5</h6>
+                      <p>Students At Risk</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class='nav-tabs-outer nav-tabs-style2'>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-badges-tab" data-bs-toggle="tab" data-bs-target="#nav-badges"
+            type="button" role="tab" aria-controls="nav-badges" aria-selected="true">Badges</button>
+
+          <button class="nav-link" id="nav-students-tab" data-bs-toggle="tab" data-bs-target="#nav-students"
+            type="button" role="tab" aria-controls="nav-students" aria-selected="false">Students</button>
+
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-badges" role="tabpanel" aria-labelledby="nav-badges-tab">
+          <div class="page-filters">
+            <div class="form-group  filter-search mb-0">
+              <div class="form-group-icon-start">
+                <i class="bi bi-search "></i>
+                <input type="search" class="form-control" placeholder="Search badges">
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table-theme table-hover table table-bordered">
+              <thead>
+                <tr>
+                  <th class="tbl-sorting sorting-asc sorting-desc">Badge</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc">Total Goals</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc">Completed</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc">In Progress</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc">Not Started</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc tbl-completion-rate">Completion Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of mockData; index as i">
+                  <td class="tbl-user">
+                    <div class="tbl-user-checkbox-srno">
+                      <div class="tbl-user-wrapper">
+                        <div class="tbl-user-image">
+                          <img src="assets/images/badge-icon.svg" alt="Badge Icon">
+                        </div>
+                        <div class="tbl-user-text-action">
+                          <div class="tbl-user-text">
+                            <p>Badge Title {{i + 1}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{{item?.total_goals}}</td>
+                  <td>{{item?.complete}}</td>
+                  <td>{{item?.inprogress}}</td>
+                  <td>{{item?.not_started}}</td>
+                  <td>
+                    <div class="progressbar-wrapper">
+                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-primary" [ngStyle]="{'width': item?.rate + '%'}"></div>
+                      </div>
+                      <span class="progressbar-counter">{{item?.rate}}%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-students" role="tabpanel" aria-labelledby="nav-students-tab">
+          <div class="page-filters">
+            <div class="form-group  filter-search mb-0">
+              <div class="form-group-icon-start">
+                <i class="bi bi-search "></i>
+                <input type="search" class="form-control" placeholder="Search students">
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table-theme table-hover table table-bordered">
+              <thead>
+                <tr>
+                  <th class="tbl-sorting sorting-asc sorting-desc ">Students</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc">Total Goals</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc">Completed</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc">In Progress</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc">Not Started</th>
+                  <th class="tbl-sorting sorting-asc sorting-desc tbl-completion-rate">Completion Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of mockData; index as i">
+                  <td class="tbl-user">
+                    <div class="tbl-user-checkbox-srno">
+                      <div class="tbl-user-wrapper">
+                        <div class="tbl-user-image">
+                          <img src="assets/images/badge-icon.svg" alt="Badge Icon">
+                        </div>
+                        <div class="tbl-user-text-action">
+                          <div class="tbl-user-text">
+                            <p>Student Title {{i + 1}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{{item?.total_goals}}</td>
+                  <td>{{item?.complete}}</td>
+                  <td>{{item?.inprogress}}</td>
+                  <td>{{item?.not_started}}</td>
+                  <td>
+                    <div class="progressbar-wrapper">
+                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-primary" [ngStyle]="{'width': item?.rate + '%'}"></div>
+                      </div>
+                      <span class="progressbar-counter">{{item?.rate}}%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

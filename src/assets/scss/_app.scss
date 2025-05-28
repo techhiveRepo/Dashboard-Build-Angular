@@ -1,0 +1,36 @@
+.content-area {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.page-filters {
+    margin-bottom: 20px
+}
+
+
+.card {
+    &.card-grid {
+        .card-body {
+            padding: 17px;
+
+            h6 {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 140%;
+                letter-spacing: 0;
+                color: $text_black_color;
+                margin-bottom: 10px;
+
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: 0;
+                color: $text_color;
+            }
+        }
+    }
+}

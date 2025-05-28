@@ -1,0 +1,123 @@
+.main-header {
+    background-color: $white_color;
+    box-shadow: unset;
+    transition: all 0.1s ease-out;
+    border-bottom: 1px solid $stock_light;
+
+    .navbar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+
+        .navbar-header-right,
+        .navbar-header-left {
+            display: flex;
+            align-items: center;
+            gap: 0 20px;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: 0;
+            color: $text_black_color;
+        }
+
+        .navbar-header-right {
+            .btn {
+                font-weight: 600;
+                font-size: 14px;
+
+            }
+
+            .btn-outline-white {
+                color: #344054;
+
+            }
+        }
+    }
+
+
+}
+
+
+.search-with-dropdown {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+
+    input[type="search"] {
+        padding-right: 100px;
+    }
+
+    .group-dropdown {
+        position: absolute;
+        max-width: 125px;
+        right: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        border-left: 1px solid $stock_light;
+        padding-left: 10px;
+        margin-left: 5px;
+
+        .btn {
+            border: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+.back-wrapper {
+    margin-bottom: 20px;
+
+    .back-button {
+        margin-bottom: 23px;
+    }
+
+    .back-wrapper-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        .back-wrapper-left {
+            .page-title-wrapper {
+                h4 {
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 140%;
+                    letter-spacing: 0;
+                    color: $text_black_color;
+
+                    &:nth-last-child(1) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .back-wrapper-right {}
+    }
+
+}
+
+.card-chat {
+    .chat-title {
+        margin-bottom: 20px;
+
+        h6 {
+            font-size: 16px;
+            line-height: 140%;
+            font-weight: 600;
+            letter-spacing: 0;
+            color: $text_black_color;
+            margin-bottom: 0;
+        }
+
+    }
+}
